@@ -3,13 +3,14 @@ import java.util.Scanner;
 
 public class CoinProgram {
     int headCnt,tailCnt,n;
+    String name;
 
     public CoinProgram(){
         headCnt = tailCnt = 0;
         n = 3;
         Random random = new Random();
 
-        Introduce();
+        name = Introduce();
 
         System.out.println("Tossing a coin...");
         for(int i = 1;i <= n;i++){
@@ -28,13 +29,13 @@ public class CoinProgram {
         System.out.println("Heads: " + headCnt + ", Tails: " + tailCnt);
 
         if(headCnt > tailCnt){
-            System.out.println("You won!");
+            System.out.println(name + " won!");
         } else {
-            System.out.println("You lost!");
+            System.out.println(name + " lost!");
         }
     }
 
-    public void Introduce(){
+    public String Introduce(){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Who are you?");
@@ -43,6 +44,7 @@ public class CoinProgram {
         System.out.println("Hello, " + str + "!");
 
         sc.close();
+        return str;
     }
 
     public static void main(String[] args){
