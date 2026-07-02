@@ -23,6 +23,12 @@ public class CoinProgram {
         }
 
         System.out.println("Heads: " + headCnt + ", Tails: " + tailCnt);
+
+        if(headCnt > tailCnt){
+            System.out.println("You won!");
+        } else {
+            System.out.println("You lost!");
+        }
     }
 
     public static void main(String[] args){
